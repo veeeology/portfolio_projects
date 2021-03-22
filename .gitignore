@@ -130,3 +130,13 @@ dmypy.json
 
 # login files
 *_login.txt
+
+# Raw data - do not upload
+*.zip
+*.tif
+*.txt
+*.met
+*.jpg
+*.jpeg
+*.geojson
+*.tif.aux.xml
