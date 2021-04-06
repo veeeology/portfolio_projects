@@ -140,3 +140,13 @@ dmypy.json
 *.jpeg
 *.geojson
 *.tif.aux.xml
+*.csv
+*.pdf
+*.xlsx
+
+# Shapefile components
+*.shp
+*.shx
+*.dbf
+*.prj
+*.xml
