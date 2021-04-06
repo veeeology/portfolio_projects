@@ -22,22 +22,17 @@ import turbodbc, re, time, datetime, copy
 #
 # USAGE:
 #
-# import sql_utils as sql
+# from sql_RW import *
 #
 # # Set up the connection
-# connection = sql.connection_string(login_file_name)
+# sql = sql_RW(dsn = 'my dsn name')
 #
-# # Read a table from the database using the supplied connection file
-# df = sql.read_query('SELECT TOP 100 * FROM TABLE_NAME', con_str = connection)
+# # Read a table from the database
+# df = sql.read_query('SELECT TOP 100 * FROM TABLE_NAME')
 #
 # # Write the contents of the table to SQL.
-# sql.write_to_sql(df, 'TABLE_NAME', con_str = connection, \
-#                ID_cols = ['id'], if_duplicated='update')
+# sql.write_to_sql(df, 'TABLE_NAME', write_mode='update', ID_cols = ['id'])
 #
-#
-# TO-DO:
-# Refactor to object-oriented design - was originally written as a quick fix,
-# but would be cleaner as its own module.
 # =============================================================================
 
 class sql_RW():
